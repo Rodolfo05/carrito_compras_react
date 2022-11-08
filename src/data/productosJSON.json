@@ -1,0 +1,14 @@
+[
+    { "id": "1", "nombre": "Monitor Gamer 27' Odyssey G3", "precio": "305990", "src": "/image/odysseyg3.png" },
+    { "id": "2", "nombre": "Notebook Galaxy Book2 Pro 15.6'", "precio": "949990", "src": "/image/note.png" },
+    { "id": "3", "nombre": "Tablet Galaxy Tab S7 FE 12.4' 64GB", "precio": "409990", "src": "/image/table.png" },
+    { "id": "4", "nombre": "Impresora Multifuncional Láser DCP-1602", "precio": "79990", "src": "/image/impresora.png" },
+    { "id": "5", "nombre": "Minicomponente LG XBOOM RN7", "precio": "129990", "src": "/image/minicomponente.png" },
+    { "id": "6", "nombre": "Desktop Gamer AMD Ryzen 5 5600X 8TB", "precio": "969990", "src": "/image/pcgamer2.png" },
+    { "id": "7", "nombre": "Smart TV 32S5195 32' HD", "precio": "409990", "src": "/image/tv.png" },
+    { "id": "8", "nombre": "Lenovo All in One Ideacentre 3 21,5' FullHD AMD", "precio": "446990", "src": "/image/pcallinone.png" },
+    { "id": "9", "nombre": "HP All in One 21,5' FullHD Athlon", "precio": "503490", "src": "/image/mac.png" },
+    { "id": "10", "nombre": "Server PowerEdge T40 Intel Xeon", "precio": "789990", "src": "/image/server.png" },
+    { "id": "11", "nombre": "SNotebook Modern 14 B5M 14' AMD Ryzen 5", "precio": "449990", "src": "/image/note2.png" },
+    { "id": "12", "nombre": "Notebook Aspire 3 AMD Ryzen 3 3250U", "precio": "536990", "src": "/image/note3.png" }
+]
