@@ -1,29 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faCoffee, faUser } from '@fortawesome/free-solid-svg-icons'
-import React from 'react'
+import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react'
+import { Menu } from './Menu/Menu';
+
 
 const NavBar = ({ contadorCarrito, }) => {
-
-    const hola = () => {
-        console.log("fanca funto");
-    }
 
     return (
         <div className='navbarBack'>
             <nav className="navbar bg-black">
                 <div className="container-fluid">
 
-                    
-
+                
                     <a className="navbar-brand" href="#">
                         <img src="/image/ELECTROMARKET.png" className='imgLogo'/>
                     </a>
 
+                    <Menu/>
 
-                    <div className='divCartIcon col-md-2 offset-md-5' style={{width: "50px"}} onClick={hola} data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  
+
+
+                    <div className='divCartIcon col-md-2 offset-md-5' style={{width: "50px"}} data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <FontAwesomeIcon className='carritoFont' icon={faCartShopping} /> <label>{contadorCarrito}</label>
-
                     </div>
 
                     <div className='col-md-2'>

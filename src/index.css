@@ -137,3 +137,42 @@ img {
 .text-total-cart{
   font-weight: bold;
 }
+
+
+.menu{
+  position: relative;
+  left: -180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  color: #f4f4f4;
+  padding: 20px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu:hover{
+  background: #2e2e2e;
+}
+
+.menu svg{
+  position: relative;
+  padding-right: 15px;
+  top: 8px;
+}
+
+.menu-listado{
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 100px;
+  left: 280px;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: initial;
+}
