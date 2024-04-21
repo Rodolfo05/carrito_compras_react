@@ -1,15 +1,138 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  background-color: #2e2e2e;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 13vh;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.navbar-brand .imgLogo{
+  position: relative;
+  width: 200px;
+  left: -100px;
+}
+
+
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+
+.hidden{
+  display: none;
+}
+
+
+.menu-items{
+  position: relative;
+  left: -700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  color: #f4f4f4;
+  padding: 20px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 999999;
+}
+
+.menu-items:hover{
+  background: #6a6a6a;
+}
+
+.menu-items svg{
+  position: relative;
+  padding-right: 15px;
+  top: 8px;
+}
+
+
+.menu-listado{
+  position: absolute;
+  background: #e5e5e5;
+  color: #2e2e2e;
+  top: 94px;
+  left: -680px;
+}
+
+.menu-listado ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+
+.menu-listado ul li {
+  display: flex;
+  width: 100%;
+  text-align: start;
+}
+
+.menu-listado ul li a {
+  font-size: 18px;
+  padding: 10px;
+  color: #303030;
+  font-weight: 600;
+  width: 100%;
+}
+
+
+.menu-listado ul li a:hover {
+  color: #318825;
+  background-color: #b9b9b9;
+}
+
+.nav-item{
+  text-decoration: none;
+}
+
+
+/* 
 .navbarBack{
   height: 107px;
   background: #e86e2b;
+  position: absolute;
 }
 
 .imgLogo{
@@ -21,12 +144,12 @@ body {
   padding: 1rem;
   margin: 1rem;
   box-shadow: 0 0 1rem #00000025 inset;
+  position: absolute;
 }
 
 .grid-responsive {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(64px, 100%/5)), 1fr));
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   gap: 1rem;
 }
 
@@ -43,6 +166,7 @@ body {
 
 img {
   width: 300px;
+
 }
 
 #sticky-sidebar {
@@ -78,11 +202,14 @@ img {
 .imgProduct {
   width: 100%;
   height: 65%;
+  position: relative;
+  z-index: -1;
 }
 
 .imgProductCart{
   width: 97%;
   height: 92%;
+  
 }
 
 .titleProduct {
@@ -139,40 +266,4 @@ img {
 }
 
 
-.menu{
-  position: relative;
-  left: -180px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  color: #f4f4f4;
-  padding: 20px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.menu:hover{
-  background: #2e2e2e;
-}
-
-.menu svg{
-  position: relative;
-  padding-right: 15px;
-  top: 8px;
-}
-
-.menu-listado{
-  position: absolute;
-  background-color: #f9f9f9;
-  top: 100px;
-  left: 280px;
-}
-
-.hidden{
-  display: none;
-}
-
-.show{
-  display: initial;
-}
+ */

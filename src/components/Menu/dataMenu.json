@@ -3,48 +3,56 @@
       "id": 1,
       "nombre": "Electrónica",
       "descripcion": "Productos electrónicos y gadgets",
+      "nombreUrl": "electronica",
       "imagen": "url_de_la_imagen_electronica.jpg"
     },
     {
       "id": 2,
-      "nombre": "Ropa",
+      "nombre": "Vestuario",
       "descripcion": "Moda para hombres, mujeres y niños",
+      "nombreUrl": "vestuario",
       "imagen": "url_de_la_imagen_ropa.jpg"
     },
     {
       "id": 3,
       "nombre": "Hogar y Jardín",
       "descripcion": "Artículos para el hogar y decoración",
+      "nombreUrl": "hogaryjardin",
       "imagen": "url_de_la_imagen_hogar.jpg"
     },
     {
       "id": 4,
       "nombre": "Deportes y Aire Libre",
       "descripcion": "Equipos deportivos y actividades al aire libre",
+      "nombreUrl": "electronica",
       "imagen": "url_de_la_imagen_deportes.jpg"
     },
     {
       "id": 5,
       "nombre": "Belleza y Cuidado Personal",
       "descripcion": "Productos de belleza, cuidado de la piel y cuidado personal",
+      "nombreUrl": "electronica",
       "imagen": "url_de_la_imagen_belleza.jpg"
     },
     {
       "id": 6,
       "nombre": "Juguetes y Juegos",
       "descripcion": "Juguetes para todas las edades y juegos de mesa",
+      "nombreUrl": "electronica",
       "imagen": "url_de_la_imagen_juguetes.jpg"
     },
     {
       "id": 7,
       "nombre": "Libros y Entretenimiento",
       "descripcion": "Libros de diferentes géneros y artículos de entretenimiento",
+      "nombreUrl": "electronica",
       "imagen": "url_de_la_imagen_libros.jpg"
     },
     {
       "id": 8,
       "nombre": "Alimentos y Bebidas",
       "descripcion": "Productos alimenticios y bebidas de todo tipo",
+      "nombreUrl": "electronica",
       "imagen": "url_de_la_imagen_alimentos.jpg"
     }
   ]

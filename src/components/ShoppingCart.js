@@ -9,6 +9,10 @@ import SideCarrito from './SideCarrito';
 import ModalCart from './ModalCart';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { HomePage } from './Pages/HomePage';
+import { ElectronicaPage } from './Pages/ElectronicaPage';
+import { VestuarioPage } from './Pages/VestuarioPage';
 
 
 const notify = () => {
@@ -32,7 +36,7 @@ export const ShoppingCart = () => {
 
         setContadorCarrito(contadorCarrito + 1);
 
-        if(opcion !== 1){
+        if (opcion !== 1) {
             notify();
         }
 
@@ -66,7 +70,15 @@ export const ShoppingCart = () => {
     return (
         <div>
 
+                  <a className="navbar-brand" href="#">
+                        <img src="/image/ELECTROMARKET.png" className='imgLogo'/>
+                    </a>
+
             <NavBar contadorCarrito={contadorCarrito} />
+
+
+         
+
 
 
             <ModalCart contenido={carrito} addToCart={addToCart} delFromCart={deleteFromCart} />

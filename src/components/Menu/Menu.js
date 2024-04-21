@@ -4,6 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { MenuItem } from './MenuItem';
 
 import dataItemsMenu from './dataMenu.json'
+import { Link, NavLink } from 'react-router-dom';
 
 export const Menu = () => {
 
@@ -29,7 +30,7 @@ export const Menu = () => {
 
     return (
         <>
-            <div className='menu' onClick={handleShowMenu}>
+            <div className='menu-items' onClick={handleShowMenu}>
                 <FontAwesomeIcon icon={faBars} />
                 <h4>Menu</h4>
             </div>
@@ -38,7 +39,8 @@ export const Menu = () => {
                 <ul>
                     {itemsMenu.map(categoria => (
                         <li key={categoria.id}>
-                            <strong>{categoria.nombre}</strong> - {categoria.descripcion}
+                           {/* <Link to={`/${categoria.id}`}>{categoria.nombre}</Link> */}
+                           <NavLink className={'nav-item'} to={`/${categoria.nombreUrl}`}>{categoria.nombre}</NavLink>
                         </li>
                     ))}
                     {/* <MenuItem /> */}
