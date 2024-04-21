@@ -19,7 +19,8 @@ body {
 
 .header {
   position: relative;
-  background-color: #2e2e2e;
+  /* background-color: #2e2e2e; */
+  background-color: #cacaca;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,6 +126,11 @@ body {
 
 .nav-item{
   text-decoration: none;
+}
+
+
+.title-container{
+  padding: 20px 0;
 }
 
 

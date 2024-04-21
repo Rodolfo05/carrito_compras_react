@@ -70,7 +70,7 @@ export const ShoppingCart = () => {
     return (
         <div>
 
-                  <a className="navbar-brand" href="#">
+                  <a className="navbar-brand" href="/">
                         <img src="/image/ELECTROMARKET.png" className='imgLogo'/>
                     </a>
 

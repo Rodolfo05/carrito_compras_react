@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Menu } from './Menu/Menu';
+import { ShoppingCartContext } from '../context/ShoppingCartContext';
 
 
-const NavBar = ({ contadorCarrito, }) => {
+const NavBar = () => {
+
+    
+  const {cantProdCart} = useContext(ShoppingCartContext);
 
     return (
 
@@ -14,7 +18,7 @@ const NavBar = ({ contadorCarrito, }) => {
             <Menu />
 
             <div className='divCartIcon col-md-2 offset-md-5' style={{ width: "50px" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <FontAwesomeIcon className='carritoFont' icon={faCartShopping} /> <label>{contadorCarrito}</label>
+                <FontAwesomeIcon className='carritoFont' icon={faCartShopping} /> <h2>{cantProdCart}</h2> 
             </div>
 
             <div className='col-md-2'>

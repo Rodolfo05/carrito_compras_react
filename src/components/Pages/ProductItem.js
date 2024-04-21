@@ -1,6 +1,6 @@
+import React from 'react'
 
-
-const ProductItem = ({ data, addToCart}) => {
+export const ProductItem = ({ data, addToCart}) => {
 
     let {id, nombre, precio, src} = data;
 
@@ -19,4 +19,6 @@ const ProductItem = ({ data, addToCart}) => {
     )
 }
 
-export default ProductItem;
+
+
+
