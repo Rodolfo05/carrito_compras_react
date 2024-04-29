@@ -28,6 +28,11 @@ export const Menu = () => {
     }
 
 
+    const cambiaMenu = () => {
+        setShow(false);
+    }
+
+
     return (
         <>
             <div className='menu-items' onClick={handleShowMenu}>
@@ -36,7 +41,7 @@ export const Menu = () => {
             </div>
 
             <div className={`menu-listado ${show ? "" : "hidden"}`}>
-                <ul>
+                <ul onClick={cambiaMenu}>
                     {itemsMenu.map(categoria => (
                         <li key={categoria.id}>
                            {/* <Link to={`/${categoria.id}`}>{categoria.nombre}</Link> */}

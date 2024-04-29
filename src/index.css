@@ -65,7 +65,7 @@ body {
 
 .menu-items{
   position: relative;
-  left: -700px;
+  left: -400px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -93,7 +93,7 @@ body {
   background: #e5e5e5;
   color: #2e2e2e;
   top: 94px;
-  left: -680px;
+  left: -400px;
 }
 
 .menu-listado ul {
@@ -133,6 +133,9 @@ body {
   padding: 20px 0;
 }
 
+.imgProduct{
+  width: 300px;
+}
 
 /* 
 .navbarBack{

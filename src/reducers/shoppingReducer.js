@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { TYPES } from "../actions/shoppingAction";
 import productosJSON from "../data/productosJSON.json";
+
 
 export const shoppingInitialState = {
     productos: productosJSON,
@@ -14,8 +16,9 @@ export function shoppingReducer(state, action) {
     switch (action.type) {
 
         case TYPES.ADD_TO_CART: {
-            let newItem = state.productos.find(producto => producto.id === action.payload);
 
+            let newItem = state.productos.find(producto => producto.id === action.payload);
+         
             let itemInCart = state.carrito.find(item => item.id === newItem.id);
 
             return itemInCart ?

@@ -7,6 +7,8 @@ export const HomePage = () => {
 
   
   return (
-    <div>HomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePageHomePage</div>
+    <div>
+      <h1>Home</h1>
+    </div>
   )
 }

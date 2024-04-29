@@ -4,7 +4,7 @@ export const ProductItem = ({ data, addToCart}) => {
 
     let {id, nombre, precio, src} = data;
 
-    console.log("a",data);
+
     
 
     return (
