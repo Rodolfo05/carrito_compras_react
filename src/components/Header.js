@@ -8,7 +8,7 @@ export const Header = () => {
 
             <div className='header'>
 
-                <div class="menu container">
+                <div className="menu container">
 
                     <a className="navbar-brand" href="/">
                         <img src="/image/ELECTROMARKET.png" className='imgLogo' />

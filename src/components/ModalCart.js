@@ -32,10 +32,7 @@ const ModalCart = ({ contenido, addToCart, delFromCart }) => {
                                             </div>
 
                                             <div className='col-md-2 d-flex justify-content-start align-items-center'>
-
                                                 <p style={{ position: "relative", top: "-6px" }}>${new Intl.NumberFormat('es-CL').format(prod.precio)}</p>
-
-
                                             </div>
 
 

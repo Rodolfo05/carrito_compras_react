@@ -1,68 +1,40 @@
 import React, { useContext, useEffect, useReducer, useState } from 'react'
 import { shoppingInitialState, shoppingReducer } from '../../reducers/shoppingReducer';
+import productsJSON from "../../data/productosJSON.json";
 import { ProductItem } from './ProductItem';
 import { TYPES } from '../../actions/shoppingAction';
 import { ToastContainer, toast } from 'react-toastify';
 import { ShoppingCartContext } from '../../context/ShoppingCartContext';
 import ModalCart from '../ModalCart';
 import CartItem from '../CartItem';
-import { cartReducer } from '../../reducers/cartReducer';
+import { cartReducer, cartInitialState } from '../../reducers/cartReducer';
+
 
 
 export const ElectronicaPage = () => {
 
-  const initialState = [];
-
-  //const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
   const { setCantProdCart, setProductsCart } = useContext(ShoppingCartContext);
-
- 
-
 
   const [contadorCarrito, setContadorCarrito] = useState(0);
 
-  const [cartState, dispatch] = useReducer(cartReducer, initialState);
-  const { productos, carrito } = cartState;
+  const [cartState, dispatch] = useReducer(cartReducer, cartInitialState);
 
   useEffect(() => {
-    console.log(cartState); // Aquí puedes acceder al estado actualizado
-  }, [cartState]);
+    console.log(cartState.cart); // Aquí puedes acceder al estado actualizado
+    setProductsCart(cartState.cart);
+  }, [cartState.cart]);
 
-
-//   const addToCart = (id, opcion) => {
-
-//     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
-
-//     setContadorCarrito(contadorCarrito + 1);
-
-//     if (opcion !== 1) {
-//         notify();
-//     }
-
-// };
 
   const addToCart = (idProduct, opcion) => {
-    console.log("add ", idProduct);
-    // const action = {
-    //   type : '[CART] Add Product',
-    //   payload: {id: "hola", name: "chai"}
-    // }
-
-    // dispatch(action);
 
     dispatch({ type: TYPES.ADD_TO_CART, payload: idProduct });
 
-
-
-    //dispatch({ type: TYPES.ADD_TO_CART, payload: id });
-    //let { productos, carrito } = state;
-
-    //setProductsCart(carrito);
+    setProductsCart(cartState.cart);
 
 
     setContadorCarrito(contadorCarrito + 1);
     setCantProdCart(contadorCarrito + 1);
- 
+
 
     // if (opcion !== 1) {
     //   notify();
@@ -112,20 +84,14 @@ export const ElectronicaPage = () => {
         <h2>Electrónica</h2>
       </div>
 
-<button onClick={() => addToCart(3,0)}>Hola</button>
-
-{cartState.map(item => (
-          <li key={item.id}>
-            {item.name} 
-          </li>
-        ))}
+      <button onClick={() => addToCart(3, 0)}>Hola</button>
 
       <div className='products-container'>
 
         <article className='box grid-responsive'>
-          {/* {
-            productos.map((prod) => <ProductItem key={prod.id} data={prod} addToCart={addToCart} />)
-          } */}
+          {
+            productsJSON.map((prod) => <ProductItem key={prod.id} data={prod} addToCart={addToCart} />)
+          }
         </article>
 
       </div>

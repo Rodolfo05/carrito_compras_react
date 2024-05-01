@@ -37,7 +37,7 @@ const SideCarrito = () => {
           </tfoot>
         </table>
 
-        <div class="row" id="cards"></div>
+        <div className="row" id="cards"></div>
       </div>
     </div>
 
