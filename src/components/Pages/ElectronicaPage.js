@@ -1,44 +1,44 @@
 import React, { useContext, useEffect, useReducer, useState } from 'react'
-import { shoppingInitialState, shoppingReducer } from '../../reducers/shoppingReducer';
 import productsJSON from "../../data/productosJSON.json";
 import { ProductItem } from './ProductItem';
 import { TYPES } from '../../actions/shoppingAction';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { ShoppingCartContext } from '../../context/ShoppingCartContext';
-import ModalCart from '../ModalCart';
-import CartItem from '../CartItem';
 import { cartReducer, cartInitialState } from '../../reducers/cartReducer';
 
 
 
 export const ElectronicaPage = () => {
 
-  const { setCantProdCart, setProductsCart } = useContext(ShoppingCartContext);
+  const { setCantProdCart, setProductsCart, cantProdCart, productsCart, state, dispatch} = useContext(ShoppingCartContext);
 
-  const [contadorCarrito, setContadorCarrito] = useState(0);
-
-  const [cartState, dispatch] = useReducer(cartReducer, cartInitialState);
+ // const [cartState, dispatch] = useReducer(cartReducer, cartInitialState);
 
   useEffect(() => {
-    console.log(cartState.cart); // Aquí puedes acceder al estado actualizado
-    setProductsCart(cartState.cart);
-  }, [cartState.cart]);
+ // Aquí se puede acceder al estado actualizado
+ setProductsCart(state);
+    //console.log("eletro page: "+JSON.stringify(cartState.cart));
+    //console.log("context: "+JSON.stringify(productsCart));
+  }, [state]);
+
+  useEffect(() => {
+    // Aquí se puede acceder al estado actualizado
+
+    console.log("context: "+JSON.stringify(productsCart));
+     }, [productsCart]);
 
 
   const addToCart = (idProduct, opcion) => {
 
     dispatch({ type: TYPES.ADD_TO_CART, payload: idProduct });
 
-    setProductsCart(cartState.cart);
+    setProductsCart(state);
+    setCantProdCart(cantProdCart + 1);
 
 
-    setContadorCarrito(contadorCarrito + 1);
-    setCantProdCart(contadorCarrito + 1);
-
-
-    // if (opcion !== 1) {
-    //   notify();
-    // }
+    if (opcion !== 1) {
+      notify();
+    }
 
   };
 
@@ -69,13 +69,13 @@ export const ElectronicaPage = () => {
   // };
 
 
-
-
   const notify = () => {
     toast.success("Producto añadido al carrito", {
       position: toast.POSITION.TOP_CENTER
     });
   };
+
+
 
   return (
     <div>
@@ -83,6 +83,21 @@ export const ElectronicaPage = () => {
       <div className='title-container'>
         <h2>Electrónica</h2>
       </div>
+
+   <div>
+    ProductCart
+    {JSON.stringify(productsCart)}
+   </div>
+
+   <div>
+   CarductCart
+    {JSON.stringify(state)}
+   </div>
+
+   <div>
+    state
+    {JSON.stringify(state)}
+   </div>
 
       <button onClick={() => addToCart(3, 0)}>Hola</button>
 
@@ -100,8 +115,8 @@ export const ElectronicaPage = () => {
 
 
       <ToastContainer
-        autoClose={5000}
-        hideProgressBar={true}
+        autoClose={2000}
+        hideProgressBar={false}
       />
 
       <article className='box'>

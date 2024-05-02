@@ -1,9 +1,63 @@
-import React from 'react'
+import React, { useContext, useEffect, useReducer } from 'react'
+import { ShoppingCartContext } from '../context/ShoppingCartContext';
+import { TYPES } from '../actions/shoppingAction';
+import { cartReducer, cartInitialState } from '../reducers/cartReducer';
 
-const ModalCart = ({ contenido, addToCart, delFromCart }) => {
+const ModalCart = ({ contenido, delFromCart }) => {
+
+    const {cantProdCart,setCantProdCart, productsCart, setProductsCart, state, dispatch} = useContext(ShoppingCartContext);
 
     let total = 0;
 
+  
+
+
+    //const [cartState, dispatch] = useReducer(cartReducer, state);
+  
+  
+  
+    useEffect(() => {
+      // Aquí se puede acceder al estado actualizado
+      setProductsCart(state);
+  
+         //console.log("eletro page: "+JSON.stringify(cartState.cart));
+         //console.log("context: "+JSON.stringify(productsCart));
+       }, [cantProdCart]);
+  
+    const addToCart = (idProduct) => {
+        dispatch({ type: TYPES.ADD_TO_CART, payload: idProduct });
+  
+      setCantProdCart(cantProdCart + 1);
+     
+    };
+  
+  
+  
+    // const deleteFromCart = (id, e, cantidad) => {
+  
+    //   let itemInCart = state.productsCart.find(item => item.id === id);
+  
+    //   if (itemInCart) {
+  
+    //     if (e == "borraUno") {
+    //       dispatch({ type: TYPES.REMOVE_ONE_FROM_CART, payload: id });
+    //       setContadorCarrito(contadorCarrito - 1);
+    //       setCantProdCart(contadorCarrito - 1);
+    //     } else {
+    //       dispatch({ type: TYPES.REMOVE_ALL_FROM_CART, payload: id });
+    //       setContadorCarrito(contadorCarrito - cantidad);
+    //     }
+  
+    //   }
+  
+    // };
+  
+    // const clearCart = () => {
+    //   dispatch({ type: TYPES.CLEAR_CART })
+    //   setContadorCarrito(0);
+    // };
+  
+  
     return (
 
         <div>
@@ -17,7 +71,9 @@ const ModalCart = ({ contenido, addToCart, delFromCart }) => {
                         </div>
                         <div className="">
                             {
-                                contenido.map((prod) => (
+                                productsCart.length === 0 ? null
+                                :
+                                productsCart.cart.map((prod) => (
 
                                     <div className='divProdCart'>
                                         <div className='row'>
@@ -37,7 +93,7 @@ const ModalCart = ({ contenido, addToCart, delFromCart }) => {
 
 
                                             <div className='col-md-3 d-flex justify-content-start align-items-start'>
-                                                <button className='btnMoreLessCart' onClick={() => addToCart(prod.id, 1)}>+</button>
+                                                <button className='btnMoreLessCart' onClick={() => addToCart(prod.id)}>+</button>
                                                 <p className='d-flex' style={{ padding: "10px", position: "relative", top: "-6px" }}>{prod.cantidad}</p>
                                                 <button className='btnMoreLessCart' onClick={() => delFromCart(prod.id, "borraUno")}>-</button>
                                             </div>
