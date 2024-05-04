@@ -10,13 +10,37 @@ import { cartReducer, cartInitialState } from '../../reducers/cartReducer';
 
 export const ElectronicaPage = () => {
 
-  const { setCantProdCart, setProductsCart, cantProdCart, productsCart, state, dispatch} = useContext(ShoppingCartContext);
+  const [productsToList, setProductsToList] = useState([]);
 
- // const [cartState, dispatch] = useReducer(cartReducer, cartInitialState);
+  const { setCantProdCart, setProductsCart, cantProdCart, productsCart, state, dispatch } = useContext(ShoppingCartContext);
+
+  // const [cartState, dispatch] = useReducer(cartReducer, cartInitialState);
+  useEffect(() => {
+    inicializaPagina();
+  }, [])
+
+  const inicializaPagina = () => {
+
+    const path = window.location.pathname;
+
+    switch (path) {
+      case "/electronica":
+        let productosAListar = productsJSON.filter(p => p.id > 5 && p.id < 11);
+        setProductsToList(productosAListar);
+        console.log(productosAListar);
+        break;
+    
+      default:
+        break;
+    }
+
+
+
+  }
 
   useEffect(() => {
- // Aquí se puede acceder al estado actualizado
- setProductsCart(state);
+    // Aquí se puede acceder al estado actualizado
+    setProductsCart(state);
     //console.log("eletro page: "+JSON.stringify(cartState.cart));
     //console.log("context: "+JSON.stringify(productsCart));
   }, [state]);
@@ -24,8 +48,8 @@ export const ElectronicaPage = () => {
   useEffect(() => {
     // Aquí se puede acceder al estado actualizado
 
-    console.log("context: "+JSON.stringify(productsCart));
-     }, [productsCart]);
+    console.log("context: " + JSON.stringify(productsCart));
+  }, [productsCart]);
 
 
   const addToCart = (idProduct, opcion) => {
@@ -84,30 +108,40 @@ export const ElectronicaPage = () => {
         <h2>Electrónica</h2>
       </div>
 
-   <div>
-    ProductCart
-    {JSON.stringify(productsCart)}
-   </div>
+      <div>
+        ProductCart
+        {JSON.stringify(productsCart)}
+      </div>
 
-   <div>
-   CarductCart
-    {JSON.stringify(state)}
-   </div>
+      <div>
+        CarductCart
+        {JSON.stringify(state)}
+      </div>
 
-   <div>
-    state
-    {JSON.stringify(state)}
-   </div>
+      <div>
+        state
+        {JSON.stringify(state)}
+      </div>
 
       <button onClick={() => addToCart(3, 0)}>Hola</button>
 
-      <div className='products-container'>
+      <div className='container'>
+        <div className='row'>
 
-        <article className='box grid-responsive'>
+
+
           {
-            productsJSON.map((prod) => <ProductItem key={prod.id} data={prod} addToCart={addToCart} />)
+            productsToList.map(
+              (prod) =>
+                <div className='col-sm-2 col-md-3'>
+                  <ProductItem key={prod.id} data={prod} addToCart={addToCart} />
+                </div>
+            )
           }
-        </article>
+
+
+        </div>
+
 
       </div>
 
