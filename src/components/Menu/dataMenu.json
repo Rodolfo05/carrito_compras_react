@@ -15,44 +15,30 @@
     },
     {
       "id": 3,
-      "nombre": "Hogar y Jardín",
-      "descripcion": "Artículos para el hogar y decoración",
-      "nombreUrl": "hogarjardin",
+      "nombre": "Muebles",
+      "descripcion": "Muebles",
+      "nombreUrl": "muebles",
       "imagen": "url_de_la_imagen_hogar.jpg"
     },
     {
       "id": 4,
       "nombre": "Deportes y Aire Libre",
       "descripcion": "Equipos deportivos y actividades al aire libre",
-      "nombreUrl": "electronica",
+      "nombreUrl": "deportes",
       "imagen": "url_de_la_imagen_deportes.jpg"
     },
     {
       "id": 5,
-      "nombre": "Belleza y Cuidado Personal",
-      "descripcion": "Productos de belleza, cuidado de la piel y cuidado personal",
-      "nombreUrl": "electronica",
+      "nombre": "Dormitorio",
+      "descripcion": "Productos de dormitorio",
+      "nombreUrl": "dormitorio",
       "imagen": "url_de_la_imagen_belleza.jpg"
     },
     {
       "id": 6,
       "nombre": "Juguetes y Juegos",
       "descripcion": "Juguetes para todas las edades y juegos de mesa",
-      "nombreUrl": "electronica",
+      "nombreUrl": "juguetes",
       "imagen": "url_de_la_imagen_juguetes.jpg"
-    },
-    {
-      "id": 7,
-      "nombre": "Libros y Entretenimiento",
-      "descripcion": "Libros de diferentes géneros y artículos de entretenimiento",
-      "nombreUrl": "electronica",
-      "imagen": "url_de_la_imagen_libros.jpg"
-    },
-    {
-      "id": 8,
-      "nombre": "Alimentos y Bebidas",
-      "descripcion": "Productos alimenticios y bebidas de todo tipo",
-      "nombreUrl": "electronica",
-      "imagen": "url_de_la_imagen_alimentos.jpg"
     }
   ]

@@ -35,7 +35,7 @@ export const Menu = () => {
 
     return (
         <>
-            <div className='menu-items' onClick={handleShowMenu}>
+            <div className='menu' onClick={handleShowMenu}>
                 <FontAwesomeIcon icon={faBars} />
                 <h4>Menu</h4>
             </div>

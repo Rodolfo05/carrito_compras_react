@@ -3,9 +3,8 @@ import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { HomePage } from './Pages/HomePage'
 import { ElectronicaPage } from './Pages/ElectronicaPage'
-import { VestuarioPage } from './Pages/VestuarioPage'
-import { HogarJardinPage } from './Pages/HogarJardinPage'
 import NavBar from './NavBar'
+import { ProductsPage } from './Pages/ProductsPage'
 
 export const Main = () => {
     return (
@@ -17,11 +16,13 @@ export const Main = () => {
 
             <Routes>
                 <Route path='/' element={<HomePage />} />
-                <Route path='electronica' element={<ElectronicaPage />} />
-                <Route path='vestuario' element={<VestuarioPage />} />
-                <Route path='hogarjardin' element={<HogarJardinPage />} />
+                <Route path='electronica' element={<ProductsPage />} />
+                <Route path='vestuario' element={<ProductsPage />} />
+                <Route path='muebles' element={<ProductsPage />} />
+                <Route path='deportes' element={<ProductsPage />} />
+                <Route path='dormitorio' element={<ProductsPage />} />
+                <Route path='juguetes' element={<ProductsPage />} />
 
-                {/* <Route path='/*' element={<HomePage/>} /> */}
 
                 <Route path='/*' element={<Navigate to="/" />} />
             </Routes>

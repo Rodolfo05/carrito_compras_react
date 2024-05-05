@@ -1,14 +1,44 @@
 [
-    { "id": "1", "nombre": "Monitor Gamer 27' Odyssey G3", "precio": "305990", "src": "/image/odysseyg3.png" },
-    { "id": "2", "nombre": "Notebook Galaxy Book2 Pro 15.6'", "precio": "949990", "src": "/image/note.png" },
-    { "id": "3", "nombre": "Tablet Galaxy Tab S7 FE 12.4' 64GB", "precio": "409990", "src": "/image/table.png" },
-    { "id": "4", "nombre": "Impresora Multifuncional Láser DCP-1602", "precio": "79990", "src": "/image/impresora.png" },
-    { "id": "5", "nombre": "Minicomponente LG XBOOM RN7", "precio": "129990", "src": "/image/minicomponente.png" },
-    { "id": "6", "nombre": "Desktop Gamer AMD Ryzen 5 5600X 8TB", "precio": "969990", "src": "/image/pcgamer2.png" },
-    { "id": "7", "nombre": "Smart TV 32S5195 32' HD", "precio": "409990", "src": "/image/tv.png" },
-    { "id": "8", "nombre": "Lenovo All in One Ideacentre 3 21,5' FullHD AMD", "precio": "446990", "src": "/image/pcallinone.png" },
-    { "id": "9", "nombre": "HP All in One 21,5' FullHD Athlon", "precio": "503490", "src": "/image/mac.png" },
-    { "id": "10", "nombre": "Server PowerEdge T40 Intel Xeon", "precio": "789990", "src": "/image/server.png" },
-    { "id": "11", "nombre": "SNotebook Modern 14 B5M 14' AMD Ryzen 5", "precio": "449990", "src": "/image/note2.png" },
-    { "id": "12", "nombre": "Notebook Aspire 3 AMD Ryzen 3 3250U", "precio": "536990", "src": "/image/note3.png" }
+    { "id": "1", "nombre": "Monitor Gamer 27' Odyssey G3", "precio": "305990", "src": "/image/odysseyg3.png", "familia": "electrónica" },
+    { "id": "2", "nombre": "Notebook Galaxy Book2 Pro 15.6'", "precio": "949990", "src": "/image/note.png", "familia": "electrónica" },
+    { "id": "3", "nombre": "Tablet Galaxy Tab S7 FE 12.4' 64GB", "precio": "409990", "src": "/image/table.png", "familia": "electrónica" },
+    { "id": "4", "nombre": "Impresora Multifuncional Láser DCP-1602", "precio": "79990", "src": "/image/impresora.png", "familia": "electrónica" },
+    { "id": "5", "nombre": "Minicomponente LG XBOOM RN7", "precio": "129990", "src": "/image/minicomponente.png", "familia": "electrónica" },
+    { "id": "6", "nombre": "Desktop Gamer AMD Ryzen 5 5600X 8TB", "precio": "969990", "src": "/image/pcgamer2.png", "familia": "electrónica" },
+
+    { "id": "7", "nombre": "POLERÓN TOMMY HILFIGER", "precio": "47990", "src": "/image/v1.jpg", "familia": "vestuario" },
+    { "id": "8", "nombre": "PARKA CALVIN KLEIN'", "precio": "89990", "src": "/image/v2.jpg", "familia": "vestuario" },
+    { "id": "9", "nombre": "JEANS INDEX FLARE", "precio": "11890", "src": "/image/v3.jpg", "familia": "vestuario" },
+    { "id": "10", "nombre": "camisa manga larga marquis", "precio": "12990", "src": "/image/v4.jpg", "familia": "vestuario" },
+    { "id": "11", "nombre": "polera converse", "precio": "15990", "src": "/image/v5.jpg", "familia": "vestuario" },
+    { "id": "12", "nombre": "pantalón cargo index", "precio": "21990", "src": "/image/v6.jpg", "familia": "vestuario" },
+
+    { "id": "13", "nombre": "sofa seccional home", "precio": "649990", "src": "/image/21.jpg", "familia": "muebles" },
+    { "id": "14", "nombre": "juego de comedor musso 6s'", "precio": "419990", "src": "/image/22.jpg", "familia": "muebles" },
+    { "id": "15", "nombre": "velador rosen dolce", "precio": "109990", "src": "/image/23.jpg", "familia": "muebles" },
+    { "id": "16", "nombre": "silla escritorio one sit", "precio": "68900", "src": "/image/24.jpg", "familia": "muebles" },
+    { "id": "17", "nombre": "rack vekka home", "precio": "72990", "src": "/image/25.jpg", "familia": "muebles" },
+    { "id": "18", "nombre": "rack dagon milan", "precio": "279990", "src": "/image/26.jpg", "familia": "muebles" },
+
+    { "id": "19", "nombre": "jockey nicke club white", "precio": "12990", "src": "/image/31.jpg", "familia": "deportes" },
+    { "id": "20", "nombre": "balón puma fútsal ms'", "precio": "14990", "src": "/image/32.jpg", "familia": "deportes" },
+    { "id": "21", "nombre": "short adidas black 3 bandas", "precio": "22990", "src": "/image/33.jpg", "familia": "deportes" },
+    { "id": "22", "nombre": "Casco rojo/negro enduro m", "precio": "8990", "src": "/image/34.jpg", "familia": "deportes" },
+    { "id": "23", "nombre": "bombin rigle pcp 6000 psi", "precio": "69990", "src": "/image/35.jpg", "familia": "deportes" },
+    { "id": "24", "nombre": "luz led para bicicleta ajustable", "precio": "7990", "src": "/image/36.jpg", "familia": "deportes" },
+
+    
+    { "id": "19", "nombre": "juego de sabanas home lisa 200H", "precio": "14990", "src": "/image/41.jpg", "familia": "dormitorio" },
+    { "id": "20", "nombre": "juego de sabanas cannon boking 200h'", "precio": "29990", "src": "/image/42.jpg", "familia": "dormitorio" },
+    { "id": "21", "nombre": "cama europea belsogno plus", "precio": "169990", "src": "/image/43.jpg", "familia": "dormitorio" },
+    { "id": "22", "nombre": "Colchon rosen new style 4 plus", "precio": "138990", "src": "/image/44.jpg", "familia": "dormitorio" },
+    { "id": "23", "nombre": "Colchon cic excellence blue", "precio": "69990", "src": "/image/45.jpg", "familia": "dormitorio" },
+    { "id": "24", "nombre": "Colchon rosen wave 1 pl", "precio": "99990", "src": "/image/46.jpg", "familia": "dormitorio" },
+
+    { "id": "19", "nombre": "figura star wars  control remoto", "precio": "54990", "src": "/image/51.jpg", "familia": "juguetes" },
+    { "id": "20", "nombre": "set aeronave de lujo de bowser super mario'", "precio": "52990", "src": "/image/52.jpg", "familia": "juguetes" },
+    { "id": "21", "nombre": "SET PAW PATROL MIGHTY VEHICULO SKYE", "precio": "22990", "src": "/image/53.jpg", "familia": "juguetes" },
+    { "id": "22", "nombre": "FIGURA DE COLECCION MASTERS OF THE UNIVERSE", "precio": "21990", "src": "/image/54.jpg", "familia": "juguetes" },
+    { "id": "23", "nombre": "FIGURA STAR WARS THE MANDALORIAN GROGU", "precio": "66490", "src": "/image/55.jpg", "familia": "juguetes" },
+    { "id": "24", "nombre": "FIGURA DE ACCIÓN TRANSFORMERS STUDIO ", "precio": "7990", "src": "/image/56.jpg", "familia": "juguetes" }
 ]

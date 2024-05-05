@@ -1,28 +1,55 @@
-import React, { useContext, useEffect, useReducer, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import productsJSON from "../../data/productosJSON.json";
 import { ProductItem } from './ProductItem';
 import { TYPES } from '../../actions/shoppingAction';
 import { toast, ToastContainer } from 'react-toastify';
 import { ShoppingCartContext } from '../../context/ShoppingCartContext';
 
-export const ElectronicaPage = () => {
+export const ProductsPage = () => {
 
   const [productsToList, setProductsToList] = useState([]);
+  const [categoryPage, setCategoryPage] = useState("");
   const { setCantProdCart, setProductsCart, cantProdCart, productsCart, state, dispatch } = useContext(ShoppingCartContext);
 
   useEffect(() => {
     inicializaPagina();
-  }, [])
+  }, [productsToList])
 
   const inicializaPagina = () => {
 
     const path = window.location.pathname;
+    let productosAListar;
 
     switch (path) {
       case "/electronica":
-        let productosAListar = productsJSON.filter(p => p.id > 5 && p.id < 11);
+        productosAListar = productsJSON.filter(p => p.familia === "electrónica");
         setProductsToList(productosAListar);
-        console.log(productosAListar);
+        setCategoryPage("electrónica");
+        break;
+      case "/vestuario":
+        productosAListar = productsJSON.filter(p => p.familia === "vestuario");
+        setProductsToList(productosAListar);
+        setCategoryPage("vestuario");
+        break;
+      case "/muebles":
+        productosAListar = productsJSON.filter(p => p.familia === "muebles");
+        setProductsToList(productosAListar);
+        setCategoryPage("muebles");
+        break;
+      case "/deportes":
+        productosAListar = productsJSON.filter(p => p.familia === "deportes");
+        setProductsToList(productosAListar);
+        setCategoryPage("deportes");
+        break;
+      case "/dormitorio":
+        productosAListar = productsJSON.filter(p => p.familia === "dormitorio");
+        setProductsToList(productosAListar);
+        setCategoryPage("dormitorio");
+        break;
+      case "/juguetes":
+        productosAListar = productsJSON.filter(p => p.familia === "juguetes");
+        setProductsToList(productosAListar);
+        setCategoryPage("juguetes");
         break;
 
       default:
@@ -58,7 +85,7 @@ export const ElectronicaPage = () => {
     <div>
 
       <div className='title-container'>
-        <h2>Electrónica</h2>
+        <h2>{categoryPage}</h2>
       </div>
 
 

@@ -1,19 +1,16 @@
 
-import { useReducer } from "react";
+
 import productsJSON from "../data/productosJSON.json";
-
-
+import { TYPES } from "../actions/shoppingAction";
 
 
 
 export const cartReducer = (state, action) => {
 
-    console.log(state);
-
     switch (action.type) {
 
-        case '[CART] Add Product': {
-            console.log(state);
+        case TYPES.ADD_TO_CART: {
+
             let newProduct = productsJSON.find(p => p.id === action.payload);
 
             let productInCart = state.cart.find(p => p.id === newProduct.id);
@@ -31,12 +28,47 @@ export const cartReducer = (state, action) => {
 
 
             }
-        case 'NoN':
-            throw new Error('Action.type NoN no esta implementado')
-            break;
+        case TYPES.REMOVE_ONE_FROM_CART: {
 
-        default:
-            return state;
+                let productInCart = state.cart.find(item => item.id === action.payload);
+    
+                let newCart;
+    
+                if(productInCart.cantidad == 1){
+                    newCart = state.cart.filter((item) => item.id !== productInCart.id);
+    
+                    return{
+                        ...state, cart: newCart
+                    }
+        
+                }else{
+                     return{
+                        ...state,
+                        cart: state.cart.map((item) => item.id === productInCart.id ? { ...item, cantidad: item.cantidad - 1 } : item)
+                    }
+                }
+            
+            
+            }
+            case TYPES.REMOVE_ALL_FROM_CART: {
+    
+                let productInCart = state.cart.find(item => item.id === action.payload);
+    
+                let newCart;
+                newCart = state.cart.filter((item) => item.id !== productInCart.id);
+    
+                return{
+                    ...state,
+                    cart: newCart
+                }
+    
+            }
+            case TYPES.CLEAR_CART: {
+    
+                return [];
+    
+            }
+            default:
+                return state;
+        }
     }
-
-}
