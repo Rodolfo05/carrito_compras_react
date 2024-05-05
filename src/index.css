@@ -18,7 +18,7 @@ body {
   height: 20rem !important;
 }
 
-.cardImg{
+.cardImg {
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,7 +34,7 @@ body {
   object-fit: contain;
 }
 
-.card-title{
+.card-title {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -54,21 +54,21 @@ body {
   cursor: pointer;
 }
 
-.menu h4{
+.menu h4 {
   position: relative;
   top: 2px;
   padding-left: 4px;
 }
 
-.menu:hover{
+.menu:hover {
   background-color: #494949;
   border-radius: 8px;
 }
 
 
-.menu-listado{
+.menu-listado {
   position: fixed;
-  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
   color: #f0f0f0;
   /* position: absolute;
   background: #e5e5e5;
@@ -105,10 +105,10 @@ body {
 .menu-listado ul li a:hover {
   color: #ffffff;
   background-color: #494949;
-} 
+}
 
 
-.navbar-brand .imgLogo{
+.navbar-brand .imgLogo {
   position: relative;
   width: 200px;
   left: -100px;
@@ -117,31 +117,35 @@ body {
 
 
 
-.hidden{
+.hidden {
   display: none;
 }
 
 
-.divCartIcon{
+.divCartIcon {
   color: #f0f0f0;
-  padding: 18px 20px;
+  padding: 18px 0px;
+  padding-left: 5px;
+  width: 70px;
   display: flex;
   justify-content: center;
   position: relative;
+  justify-items: center;
+  right: 20px;
 }
 
-.divCartIcon svg{
+.divCartIcon svg {
   font-size: 28px;
 }
 
-.divCartIcon:hover{
+.divCartIcon:hover {
   color: #ffffff;
   background-color: #494949;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.divCartCount{
+.divCartCount {
   font-size: 14px;
   padding: 1px 7px;
   border-radius: 50%;
@@ -156,32 +160,32 @@ body {
   align-items: center;
 }
 
-.divCartCount label{
+.divCartCount label {
   position: relative;
   right: 1px;
 }
 
 
 
-.nav-bar-menu{
+.nav-bar-menu {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.nav-bar-cart{
+.nav-bar-cart {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.title-container{
+.title-container {
   padding: 18px 38px;
   text-align: center;
 }
 
-.title-container h2{
+.title-container h2 {
   font-size: 30px;
   font-weight: 500;
   text-transform: uppercase;

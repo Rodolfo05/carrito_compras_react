@@ -4,8 +4,11 @@ import { ProductItem } from './ProductItem';
 import { TYPES } from '../../actions/shoppingAction';
 import { toast, ToastContainer } from 'react-toastify';
 import { ShoppingCartContext } from '../../context/ShoppingCartContext';
+import { useLocation } from 'react-router-dom';
 
 export const ProductsPage = () => {
+
+  let location = useLocation();
 
   const [productsToList, setProductsToList] = useState([]);
   const [categoryPage, setCategoryPage] = useState("");
@@ -13,13 +16,13 @@ export const ProductsPage = () => {
 
   useEffect(() => {
     inicializaPagina();
-  }, [productsToList])
+  }, [location])
 
   const inicializaPagina = () => {
 
     const path = window.location.pathname;
     let productosAListar;
-
+   
     switch (path) {
       case "/electronica":
         productosAListar = productsJSON.filter(p => p.familia === "electrónica");
