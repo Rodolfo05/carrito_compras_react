@@ -57,12 +57,12 @@ const ModalCart = ({ contenido, delFromCart }) => {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
-                        <div className="">
+                        <div className="cart-modal">
 
                             {
                                 productsCart.cart ? productsCart.cart.length === 0 ?
                                     (
-                                        <div>
+                                        <div className='cart-empty-modal'>
                                             Tu bolsa esta vacía.
                                         </div>
                                     )
@@ -71,28 +71,28 @@ const ModalCart = ({ contenido, delFromCart }) => {
                                         <>
 
                                             <div className='divProdCart'>
-                                                <div className='row'>
+                                             
 
-                                                    <div className='col-md-2'>
+                                                    <div className=''>
                                                         <img className="imgProductCart" src={prod.src}></img>
                                                     </div>
 
-                                                    <div className='col-md-5 d-flex justify-content-start align-items-center'>
+                                                    <div className=''>
                                                         <p className='nameProductCart' key={prod.id}>{prod.nombre}</p>
 
                                                     </div>
 
-                                                    <div className='col-md-2 d-flex justify-content-start align-items-center'>
+                                                    <div className=''>
                                                         <p style={{ position: "relative", top: "-6px" }}>${new Intl.NumberFormat('es-CL').format(prod.precio)}</p>
                                                     </div>
 
 
-                                                    <div className='col-md-3 d-flex justify-content-start align-items-start'>
+                                                    <div className=''>
                                                         <button className='btnMoreLessCart' onClick={() => addToCart(prod.id)}>+</button>
                                                         <p className='d-flex' style={{ padding: "10px", position: "relative", top: "-6px" }}>{prod.cantidad}</p>
                                                         <button className='btnMoreLessCart' onClick={() => deleteFromCart(prod.id, "borraUno")}>-</button>
                                                     </div>
-                                                </div>
+                                            
 
                                                 <div style={{ display: "none" }}>
                                                     {

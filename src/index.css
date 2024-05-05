@@ -67,9 +67,10 @@ body {
 
 
 .menu-listado {
-  position: fixed;
+  position: absolute;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
   color: #f0f0f0;
+  top: 100%;
   /* position: absolute;
   background: #e5e5e5;
   color: #2e2e2e;
@@ -124,9 +125,9 @@ body {
 
 .divCartIcon {
   color: #f0f0f0;
+  width: 70px;
   padding: 18px 0px;
   padding-left: 5px;
-  width: 70px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -191,137 +192,25 @@ body {
   text-transform: uppercase;
 }
 
-
-/* 
-
-
-
-
-/* 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.header {
-  position: relative;
-  background-color: #cacaca;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 13vh;
-  display: flex;
-  align-items: center;
-}
-
-.menu {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-.navbar-brand .imgLogo{
-  position: relative;
-  width: 200px;
-  left: -100px;
-}
-
-
-
-.menu-icono {
-  width: 25px;
-}
-
-.menu label {
-  cursor: pointer;
-  display: none;
-}
-
-
-.hidden{
-  display: none;
-}
-
-
-.menu-items{
-  position: relative;
-  left: -400px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.cart-empty-modal{
+  padding: 100px 10px;
   text-align: center;
-  color: #f4f4f4;
-  padding: 20px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 999999;
-}
-
-.menu-items:hover{
-  background: #6a6a6a;
-}
-
-.menu-items svg{
-  position: relative;
-  padding-right: 15px;
-  top: 8px;
-}
-
-
-.menu-listado{
-  position: absolute;
-  background: #e5e5e5;
-  color: #2e2e2e;
-  top: 94px;
-  left: -400px;
-}
-
-.menu-listado ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-}
-
-
-.menu-listado ul li {
-  display: flex;
-  width: 100%;
-  text-align: start;
-}
-
-.menu-listado ul li a {
   font-size: 18px;
-  padding: 10px;
-  color: #303030;
-  font-weight: 600;
-  width: 100%;
+  font-weight: 400;
 }
 
-
-.menu-listado ul li a:hover {
-  color: #318825;
-  background-color: #b9b9b9;
-}
-
-.nav-item{
-  text-decoration: none;
-}
-
-
-.title-container{
-  padding: 20px 0;
-}
-
-.imgProduct{
-  width: 300px;
-}
 
 .imgProductCart{
   width: 70px;
-} */
+}
+
+.divProdCart{
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.divProdCart .row{
+
+}

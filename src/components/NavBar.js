@@ -26,12 +26,12 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
             <div className='nav-bar-menu'>
-              <div>
+        
                 <Menu />
-              </div>
+             
 
              <div className='nav-bar-cart'>
-             <div className='divCartIcon col-md-2 offset-md-5' style={{ width: "50px" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
+             <div className='divCartIcon' data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <FontAwesomeIcon icon={faBagShopping} />
                 <div className='divCartCount'><label>{cantProdCart}</label></div>
               </div>
