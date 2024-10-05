@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { MenuItem } from './MenuItem';
+
 
 import dataItemsMenu from './dataMenu.json'
 import { Link, NavLink } from 'react-router-dom';

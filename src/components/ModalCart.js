@@ -61,26 +61,24 @@ const ModalCart = ({ contenido, delFromCart }) => {
                                     :
                                     productsCart.cart.map((prod) => (
 
-                                        <div className='divProdCart'>
+                                        <div className='modal-cart'>
                                             <div className='row'>
-
                                                 <div className='col-md-2'>
-                                                    <img className="imgProductCart" src={prod.src}></img>
+                                                    <img className="cardImagen" src={prod.src}></img>
                                                 </div>
 
-                                                <div className='col-md-5 d-flex justify-content-start align-items-center'>
+                                                <div className='col-md-5 cont-nameProductCart d-flex justify-content-start align-items-center'>
                                                     <p className='nameProductCart' key={prod.id}>{prod.nombre}</p>
-
                                                 </div>
 
-                                                <div className='col-md-2 d-flex justify-content-start align-items-center'>
-                                                    <p style={{ position: "relative", top: "-6px" }}>${new Intl.NumberFormat('es-CL').format(prod.precio)}</p>
+                                                <div className='col-md-2 cont-priceProductCart d-flex justify-content-start align-items-center'>
+                                                    <p>${new Intl.NumberFormat('es-CL').format(prod.precio)}</p>
                                                 </div>
 
 
                                                 <div className='col-md-3 d-flex justify-content-start align-items-start'>
                                                     <button className='btnMoreLessCart' onClick={() => addToCart(prod.id)}>+</button>
-                                                    <p className='d-flex' style={{ padding: "10px", position: "relative", top: "-6px" }}>{prod.cantidad}</p>
+                                                    <p className='d-flex'>{prod.cantidad}</p>
                                                     <button className='btnMoreLessCart' onClick={() => deleteFromCart(prod.id, "borraUno")}>-</button>
                                                 </div>
                                             </div>

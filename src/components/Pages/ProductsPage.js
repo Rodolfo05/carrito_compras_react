@@ -11,13 +11,15 @@ export const ProductsPage = () => {
   const [categoryPage, setCategoryPage] = useState("");
   const { setCantProdCart, setProductsCart, cantProdCart, productsCart, state, dispatch } = useContext(ShoppingCartContext);
 
+  const path = window.location.pathname;
+
   useEffect(() => {
     inicializaPagina();
-  }, [productsToList])
+  }, [path])
 
   const inicializaPagina = () => {
 
-    const path = window.location.pathname;
+
     let productosAListar;
 
     switch (path) {
@@ -94,7 +96,7 @@ export const ProductsPage = () => {
           {
             productsToList.map(
               (prod) =>
-                <div className='col-sm-2 col-md-3'>
+                <div key={prod.id} className='col-sm-2 col-md-3'>
                   <ProductItem key={prod.id} data={prod} addToCart={addToCart} />
                 </div>
             )
