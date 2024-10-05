@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
@@ -32,10 +32,30 @@ export const Menu = () => {
         setShow(false);
     }
 
+    var elementoExcluido = document.getElementById('menu');
+
+    const elementoExcluidoRef = useRef(null);
+
+    useEffect(() => {
+        cierraMenuClick();
+    }, []);
+
+    function cierraMenuClick() {
+        if (elementoExcluidoRef.current) {
+            const elementoExcluido = elementoExcluidoRef.current;
+            document.addEventListener('click', function (event) {
+                if (!elementoExcluido.contains(event.target)) {
+                    if (show) {
+                        setShow(false);
+                    }
+                }
+            });
+        }
+    }
 
     return (
         <>
-            <div className='menu' onClick={handleShowMenu}>
+            <div ref={elementoExcluidoRef} id='menu' className='menu' onClick={handleShowMenu}>
                 <FontAwesomeIcon icon={faBars} />
                 <h4>Menu</h4>
             </div>
@@ -44,8 +64,8 @@ export const Menu = () => {
                 <ul onClick={cambiaMenu}>
                     {itemsMenu.map(categoria => (
                         <li key={categoria.id}>
-                           {/* <Link to={`/${categoria.id}`}>{categoria.nombre}</Link> */}
-                           <NavLink className={'nav-item'} to={`/${categoria.nombreUrl}`}>{categoria.nombre}</NavLink>
+                            {/* <Link to={`/${categoria.id}`}>{categoria.nombre}</Link> */}
+                            <NavLink className={'nav-item'} to={`/${categoria.nombreUrl}`}>{categoria.nombre}</NavLink>
                         </li>
                     ))}
                     {/* <MenuItem /> */}

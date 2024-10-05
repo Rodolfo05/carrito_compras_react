@@ -74,7 +74,7 @@ const NavBar = () => {
 
 
       {
-        cantProdCart === 0 ? null : <ModalCart />
+         <ModalCart />
       }
     </>
 
