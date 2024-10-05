@@ -70,29 +70,27 @@ const ModalCart = ({ contenido, delFromCart }) => {
                                     productsCart.cart.map((prod) => (
                                         <>
 
-                                            <div className='divProdCart'>
-                                             
-
-                                                    <div className=''>
-                                                        <img className="imgProductCart" src={prod.src}></img>
-                                                    </div>
-
-                                                    <div className=''>
-                                                        <p className='nameProductCart' key={prod.id}>{prod.nombre}</p>
-
-                                                    </div>
-
-                                                    <div className=''>
-                                                        <p style={{ position: "relative", top: "-6px" }}>${new Intl.NumberFormat('es-CL').format(prod.precio)}</p>
-                                                    </div>
+                                            <div className='modal-cart'>
 
 
-                                                    <div className=''>
-                                                        <button className='btnMoreLessCart' onClick={() => addToCart(prod.id)}>+</button>
-                                                        <p className='d-flex' style={{ padding: "10px", position: "relative", top: "-6px" }}>{prod.cantidad}</p>
-                                                        <button className='btnMoreLessCart' onClick={() => deleteFromCart(prod.id, "borraUno")}>-</button>
-                                                    </div>
-                                            
+                                                <div className='modal-cart-image'>
+                                                    <img className="imgProductCart" src={prod.src}></img>
+                                                </div>
+
+                                                <div className='modal-cart-name'>
+                                                    <p className='nameProductCart' key={prod.id}>{prod.nombre}</p>
+                                                </div>
+
+                                                <div className='modal-cart-price'>
+                                                    <p>${new Intl.NumberFormat('es-CL').format(prod.precio)}</p>
+                                                </div>
+
+                                                <div className='modal-cart-less-more'>
+                                                    <button className='button-circle minus' onClick={() => deleteFromCart(prod.id, "borraUno")}></button>
+                                                    <p className='d-flex'>{prod.cantidad}</p>
+                                                    <button className='button-circle plus' onClick={() => addToCart(prod.id)}></button>
+                                                </div>
+
 
                                                 <div style={{ display: "none" }}>
                                                     {
@@ -104,19 +102,22 @@ const ModalCart = ({ contenido, delFromCart }) => {
                                             </div>
 
 
-                                            <div className='row pt-3'>
-                                                <div className='col-md-7 d-flex justify-content-end align-items-center'>
-                                                    <p className='text-total-cart'>Total: </p>
 
-                                                </div>
-                                                <div className='col-md-2 d-flex justify-content-center'>
-                                                    <p className='text-total-cart'>${new Intl.NumberFormat('es-CL').format(total)}</p>
-                                                </div>
-                                            </div>
                                         </>
                                     ))
                                     : null
+
                             }
+
+                            <div className='row pt-3'>
+                                <div className='col-md-7 d-flex justify-content-end align-items-center'>
+                                    <p className='text-total-cart'>Total: </p>
+
+                                </div>
+                                <div className='col-md-2 d-flex justify-content-center'>
+                                    <p className='text-total-cart'>${new Intl.NumberFormat('es-CL').format(total)}</p>
+                                </div>
+                            </div>
 
                         </div>
                         <div className="modal-footer d-flex justify-content-center">

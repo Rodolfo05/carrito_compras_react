@@ -204,13 +204,98 @@ body {
   width: 70px;
 }
 
-.divProdCart{
+.modal-cart{
+  background-color: yellow;
   padding: 10px 20px;
   display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 6rem;
+}
+
+.modal-cart .modal-cart-image{
+  background-color: orange;
+}
+
+.modal-cart .modal-cart-name{
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 44, 149);
+  height: 100%;
+}
+
+.modal-cart .modal-cart-name p {
+  margin: 0;
+  line-height: 1.2; 
+}
+
+.modal-cart .modal-cart-price{
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.modal-cart .modal-cart-price p {
+  margin: 0;
+  line-height: 1.2; 
+}
+
+.modal-cart .modal-cart-less-more{
+
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.divProdCart .row{
 
+.modal-cart .modal-cart-less-more p{
+  margin: 0;
+  line-height: 1.2; 
+}
+
+
+.button-circle {
+  background-color: #ff7f00; 
+  border: none;
+  color: white;
+  width: 40px;   
+  height: 40px;
+  border-radius: 50%; 
+  font-size: 24px;    
+  font-weight: bold;  
+  text-align: center;
+  line-height: 40px;  
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.button-circle:hover {
+  background-color: #e67300; 
+}
+
+
+.button-circle:active {
+  background-color: #cc6600;
+  transform: scale(0.95);   
+}
+
+.button-circle.plus::before {
+  content: '+';
+  position: relative;
+  top: -2px; 
+}
+
+.button-circle.minus::before {
+  content: '-';
+  position: relative;
+  top: -2px; 
 }
