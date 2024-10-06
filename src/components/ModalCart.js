@@ -52,7 +52,7 @@ const ModalCart = ({ contenido, delFromCart }) => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">Carro de compras</h1>
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Carro</h1>
 
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -121,7 +121,7 @@ const ModalCart = ({ contenido, delFromCart }) => {
 
                         </div>
                         <div className="modal-footer d-flex justify-content-center">
-                            <button type="button" className="continuarCompra">Continuar</button>
+                            <button type="button" className="button">Continuar</button>
                         </div>
                     </div>
                 </div>

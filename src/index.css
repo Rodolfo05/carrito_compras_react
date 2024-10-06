@@ -10,8 +10,23 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  margin: 0; /* Eliminar margen predeterminado */
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  margin: 0;
+}
+
+.home{
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  margin: 0;
+}
 
 .cardProduct {
   width: 12rem;
@@ -205,7 +220,6 @@ body {
 }
 
 .modal-cart{
-  background-color: yellow;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -213,17 +227,14 @@ body {
   height: 6rem;
 }
 
-.modal-cart .modal-cart-image{
-  background-color: orange;
-}
 
 .modal-cart .modal-cart-name{
   width: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(20, 44, 149);
   height: 100%;
+  padding-left: 12px;
 }
 
 .modal-cart .modal-cart-name p {
@@ -236,7 +247,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding-right: 10px;
   height: 100%;
 }
 
@@ -263,16 +274,16 @@ body {
 
 
 .button-circle {
-  background-color: #ff7f00; 
+  background-color: #FF9800; 
   border: none;
   color: white;
-  width: 40px;   
-  height: 40px;
-  border-radius: 50%; 
+  width: 26px;   
+  height: 26px;
+  border-radius: 20%; 
   font-size: 24px;    
-  font-weight: bold;  
+
   text-align: center;
-  line-height: 40px;  
+  line-height: 30px;  
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -298,4 +309,55 @@ body {
   content: '-';
   position: relative;
   top: -2px; 
+}
+
+
+.button {
+  background-color: #FF9800; 
+  color: white; 
+  padding: 6px 10px; 
+  font-size: 16px; 
+  font-weight: bold;
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.button:hover {
+  background-color: #E67E22;
+  transform: scale(1.05); 
+}
+
+.button:active {
+  background-color: #D35400; 
+  transform: scale(0.98); 
+}
+
+.button:focus {
+  outline: 2px solid #FFA726; 
+}
+
+
+/* CATEGORIAS */
+.categorias{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cat-image{
+  border: 1px solid #e67d22b8;
+  width: 14rem;
+}
+
+.footer {
+  background-color: #343a40; /* Color de fondo del footer */
+  color: white; /* Color del texto */
+  text-align: center;
+  padding: 10px 0; /* Espaciado interno */
+  position: relative; /* Establece posición relativa */
+  bottom: 0; /* Alinea al fondo */
+  width: 100%; /* Ancho completo */
+  position: relative;
 }

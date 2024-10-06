@@ -40,6 +40,14 @@ export const Menu = () => {
         cierraMenuClick();
     }, []);
 
+    document.addEventListener('click', function(event) {
+        const menu = document.getElementById("menu");
+        if (!menu.contains(event.target)) {
+            setShow(false);
+        }
+      });
+
+
     function cierraMenuClick() {
         if (elementoExcluidoRef.current) {
             const elementoExcluido = elementoExcluidoRef.current;

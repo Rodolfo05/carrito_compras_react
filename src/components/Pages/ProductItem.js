@@ -18,7 +18,7 @@ export const ProductItem = ({ data, addToCart }) => {
             <div className="card-body">
                 <h5 className="card-title">{nombre}</h5>
                 <h5 className="priceProduct">${new Intl.NumberFormat('es-CL').format(precio)}</h5>
-                <button className="btnAddCart btn btn-primary" onClick={() => addToCart(id, 2)}>Agregar al carro</button>
+                <button className="button" onClick={() => addToCart(id, 2)}>Agregar al carro</button>
             </div>
         </div>
 

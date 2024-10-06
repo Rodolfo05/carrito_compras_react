@@ -5,10 +5,11 @@ import { HomePage } from './Pages/HomePage'
 import { ElectronicaPage } from './Pages/ElectronicaPage'
 import NavBar from './NavBar'
 import { ProductsPage } from './Pages/ProductsPage'
+import Footer from './Footer'
 
 export const Main = () => {
     return (
-        <div>
+        <div className='main'>
 
             <header>
                 <NavBar/>
@@ -27,7 +28,7 @@ export const Main = () => {
                 <Route path='/*' element={<Navigate to="/" />} />
             </Routes>
 
-
+            <Footer/>
 
         </div>
     )

@@ -17,7 +17,7 @@ const NavBar = () => {
 
         <div className="container-fluid">
 
-          <a className="navbar-brand mx-4 pe-4" href="#"><h4>ELECTRO</h4></a>
+          <a className="navbar-brand mx-4 pe-4" href="/"><h4>ELECTRO</h4></a>
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
